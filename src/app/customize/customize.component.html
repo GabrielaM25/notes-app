@@ -1,0 +1,39 @@
+<p>This is your customizable card</p>
+<mat-card class="customizable-card">
+    <mat-card-title [style.background]='titleBackground'>{{title}}</mat-card-title>
+    <mat-card-content>
+        <p>Your text :</p>
+        <p [style.font-style]='italicStyle' [style.font-weight]='boldStyle' [style.text-decoration]='underlineStyle'>{{text}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <mat-button-toggle color="warn" (click)='restoreCustomization()'  >Restore</mat-button-toggle>
+        
+      </mat-card-actions>
+</mat-card>
+
+<p>this is the area where you set the customization</p>
+<mat-form-field>
+<input  matInput placeholder="Set title :" [(ngModel)]="title">
+</mat-form-field>
+<br>
+<mat-form-field>
+    <input  matInput placeholder="Set title background :" [(ngModel)]="titleBackground">
+</mat-form-field>
+<br>
+<mat-form-field>
+    <input  matInput placeholder="Enter your text :" [(ngModel)]="text">
+</mat-form-field>
+<mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle (click)='setBold()' >Bold</mat-button-toggle>
+    <mat-button-toggle (click)='setItalic()'>Italic</mat-button-toggle>
+    <mat-button-toggle (click)='setUnderline()'>Underline</mat-button-toggle>
+    <mat-button-toggle (click)='none()'>None</mat-button-toggle>
+  </mat-button-toggle-group>
+  <!-- <mat-button-toggle-group #group="matButtonToggleGroup" [value]="selectedVal" (change)="onValChange(group.value)" >
+    <mat-button-toggle value="draft">
+      Draft
+    </mat-button-toggle>
+    <mat-button-toggle value="publish">
+      Publish
+    </mat-button-toggle>
+  </mat-button-toggle-group> -->
