@@ -47,6 +47,16 @@ export class CustomizeComponent implements OnInit {
     this.text='';
     //this.textStyle='';
   }
+  testMaxNumber(a: number ,b: number){
+    if( a < b){
+      return b;
+    }else if ( a > b){
+      return a;
+    }else {
+      return a;
+    }
+
+  }
 
 ngOnInit(){
 } 

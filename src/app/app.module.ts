@@ -14,6 +14,12 @@ import { GrandparentModule } from './grandparent/grandparent.module';
 import { NoteComponent } from './note/note.component';
 import { ToolsComponent } from './tools/tools.component';
 import { CustomizeComponent } from './customize/customize.component';
+import { MaxValuePipe } from './max-value.pipe';
+import { MyDirectiveDirective } from './my-directive.directive';
+import { PersonComponent } from './person/person.component';
+import { PersonDetailComponent } from './person-detail/person-detail.component';
+import { RouterModule } from '@angular/router';
+// import { RoutingExerciseComponent } from './routing-exercise/routing-exercise.component';
 
 
 @NgModule({
@@ -23,6 +29,11 @@ import { CustomizeComponent } from './customize/customize.component';
     NoteComponent,
     ToolsComponent,
     CustomizeComponent,
+    MaxValuePipe,
+    MyDirectiveDirective,
+    PersonComponent,
+    PersonDetailComponent,
+    // RoutingExerciseComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +45,8 @@ import { CustomizeComponent } from './customize/customize.component';
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

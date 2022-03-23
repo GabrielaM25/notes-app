@@ -24,9 +24,9 @@
     <input  matInput placeholder="Enter your text :" [(ngModel)]="text">
 </mat-form-field>
 <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style">
-    <mat-button-toggle (click)='setBold()' >Bold</mat-button-toggle>
-    <mat-button-toggle (click)='setItalic()'>Italic</mat-button-toggle>
-    <mat-button-toggle (click)='setUnderline()'>Underline</mat-button-toggle>
+    <mat-button-toggle id="bold-btn" (click)='setBold()' >Bold</mat-button-toggle>
+    <mat-button-toggle id="italic-btn" (click)='setItalic()'>Italic</mat-button-toggle>
+    <mat-button-toggle id="underline-btn" (click)='setUnderline()'>Underline</mat-button-toggle>
     <mat-button-toggle (click)='none()'>None</mat-button-toggle>
   </mat-button-toggle-group>
   <!-- <mat-button-toggle-group #group="matButtonToggleGroup" [value]="selectedVal" (change)="onValChange(group.value)" >

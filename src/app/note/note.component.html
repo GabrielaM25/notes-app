@@ -1,1 +1,15 @@
-<p>note works!</p>
+<div> <h3>Pancake ingriedients:</h3>
+<div *ngFor="let ingredient of ingriedients, let even=even">
+    
+    <p *ngIf="even">--> {{ingredient.name}}  {{ingredient.quantity}}</p>
+    <p></p>
+</div>
+</div>
+
+<div>
+    <p>After verification : {{ myNumber | maxValue:30:50}}</p>
+</div>
+<br>
+
+<p appMyDirective defaultColor="white">This is tha paragraph is affected by directive</p>
+<br>
